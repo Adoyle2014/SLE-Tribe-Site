@@ -3,7 +3,7 @@
  */
 $(document).ready(function() {
 
-
+// Show Map Click Handlers---------------------------
     $("#sle-overall").on('click', function() {
         sleOverallMap.showMap();
     });
@@ -23,7 +23,6 @@ $(document).ready(function() {
     $("#sle-sw").on('click', function() {
         sleSwMap.showMap();
     });
-
 
     $("#tfr-overall").on('click', function() {
         tfrOverallMap.showMap();
@@ -45,7 +44,11 @@ $(document).ready(function() {
         tfrSwMap.showMap();
     });
 
-
+//Zoom map click handlers-----------------------------
+    $(".territory-maps").on('click', '.map', function() {
+        var target = $(this).children("img").attr("src");
+        window.open(target);
+    })
 
 
 });
@@ -85,4 +88,5 @@ function mapView(url, titleDiv, title, mapDiv) {
         $(mapDiv).html('<img src="' + url + '">');
     }
 }
+
 

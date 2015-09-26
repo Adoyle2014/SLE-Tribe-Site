@@ -54,4 +54,9 @@ h1, h2, h3, h4, h5, h6 {
 .territory-maps img {
 
     max-height: 500px;
+    margin-bottom: 50px;
+}
+
+.map {
+    cursor: zoom-in;
 }
