@@ -45,10 +45,10 @@ $(document).ready(function() {
     });
 
 //Zoom map click handlers-----------------------------
-    $(".territory-maps").on('click', '.map', function() {
-        var target = $(this).children("img").attr("src");
-        window.open(target);
-    })
+    /*$(".territory-maps").on('click', '.map', function() {
+        var target = $(this).children("#mapModal");
+        $(target).modal();
+    })*/
 
 
 });
@@ -85,7 +85,7 @@ function mapView(url, titleDiv, title, mapDiv) {
 
     this.showMap = function() {
         $(titleDiv).html(title);
-        $(mapDiv).html('<img src="' + url + '">');
+        $(mapDiv).html('<a href="#mapModal" data-toggle="modal"><img class="img-thumbnail" src="' + url + '"></a><div class="modal fade img-responsive" id="mapModal" role="dialog"><img src="' + url + '"></div>');
     }
 }
 
